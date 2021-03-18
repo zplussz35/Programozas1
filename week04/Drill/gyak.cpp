@@ -2,55 +2,75 @@
 
 using namespace std;
 
-struct B {
-	virtual void f() const {cout<<"B::f\n";
-	print_message(8.5);}
-	void g() const { cout<<"B::g\n";}
-	void print_message(int a) const {cout<<"Message: "<<a<<endl;}
-	//TODO
+class B1 {
+	public:
+	virtual void vf() const {cout<<"B1::vf()\n";}
+	void f() const { cout<<"B1::f()\n";}
+	virtual void pvf()=0;
+};
 
+struct B2 {
+	virtual void pvf()=0;
+
+};
+struct D21:B2 {
+	string data="D21::pvf()";
+	void pvf() override{cout<<data;}
 
 };
 
-struct D:B{
+struct D22:D21{
+	int data=0;
+	void f(B2& b2){b2.pvf();}
 
-	void f() const {cout<<"D::f\n";print_message(8.5);}
-	void g()  {cout<<"D::g\n";}
-	void print_message(double a)const {cout<<"Message: "<<a<<endl;}
 };
 
-struct DD:B{
-	void f() {cout<<"DD::f\n";}
-	void g() const {cout<<"DD::g\n";}
+struct D1:B1{
+
+	void vf() const {cout<<"D1::vf()\n";}
+	void f()  {cout<<"D1::f()\n";}
+	void pvf() override {cout<<"D1::pvf()\n";}
+	
 };
 
-void call (const B& b)
+struct D2:D1{
+	void vf() {cout<<"D2::vf()\n";}
+	void f()const {cout<<"D2::f()\n";}
+	void pvf() override { cout<<"D2::pvf()\n";}
+};
+
+void call ( B1& b)
 {
+	b.vf();
 	b.f();
-	b.g();
+	b.pvf();
 	}
 
 int main()
 {
-	B b;
-	D d;
-	DD dd;
+	//B1 b;
+	D1 d;
+	D2 dd;
 	
-	call(b);
+	//call(b);
 	call(d);
 	call(dd);
 	
+	
+	
+	
+	
+	
 	cout<<"Call eng\n";
+
+	//B2 b2;
+	D21 d21; cout<<'\n';
+	D22 d22;
 	
-	b.f();
-	b.g();
-	
-	d.f();
-	d.g();
-	
-	dd.f();
-	dd.g();
-	
+	//b2.pvf();
+	d21.pvf(); cout<<'\n';
+	d22.pvf();
+
 	return 0;
 
 }
