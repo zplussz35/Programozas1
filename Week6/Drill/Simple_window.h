@@ -20,7 +20,7 @@ struct Simple_window : Graph_lib::Window {
 
     bool wait_for_button(); // simple event loop
 
-private:
+//private:
     Button next_button;     // the "next" button
     bool button_pushed;     // implementation detail
 

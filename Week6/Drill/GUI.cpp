@@ -9,7 +9,7 @@
 #include <FL/Fl_Output.H>
 #include "GUI.h"
 
-namespace Graph_lib {;
+namespace Graph_lib {
 
 //------------------------------------------------------------------------------
 
@@ -24,6 +24,7 @@ void Button::attach(Window& win)
 
 int In_box::get_int()
 {
+
     Fl_Input& pi = reference_to<Fl_Input>(pw);
     // return atoi(pi.value());
     const char* p = pi.value();
