@@ -67,9 +67,7 @@ public:
 int main()
 try{
 	
-	Person a;
-	//cin>>a;
-	//cout<<a;
+	
 	
 	Person p("Goofy",63,1);
 	cout<<"\nname: "<<p.getname()<<", age: "<<p.getage()<<endl;
@@ -89,7 +87,7 @@ try{
 		cout<<'\t'<<i<<'\n';
 		cout<<"which name do you want to give? (1-first,2-second): ";
 		cin>>name_chosen;
-		if (name_chosen!=1||name_chosen!=2) error("You must give 1 or 2!");
+		if (name_chosen!=1&&name_chosen!=2) error("You must give 1 or 2!");
 		cout<<"Name: ";
 		cin>>name;
 		if(name=="0") break;
