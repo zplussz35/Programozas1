@@ -1,5 +1,4 @@
 #include "GUI.h"
-#include "Graph.h"
 
 
 using namespace Graph_lib;
