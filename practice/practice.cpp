@@ -4,11 +4,12 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+template<typename T>
 class my_vector{
 	int sz;
-	double* elem;
+	T* elem;
 public:
-	my_vector(int size):sz{size},elem{new double[sz]}{
+	my_vector(int size):sz{size},elem{new T[sz]}{
 		for(int i=0;i<sz;++i)
 		{
 			elem[i]=0;

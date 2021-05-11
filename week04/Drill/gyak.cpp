@@ -4,8 +4,8 @@ using namespace std;
 
 class B1 {
 	public:
-	virtual void vf() const {cout<<"B1::vf()\n";}
 	void f() const { cout<<"B1::f()\n";}
+	virtual void vf() const {cout<<"B1::vf()\n";}
 	virtual void pvf()=0;
 };
 
@@ -26,16 +26,15 @@ struct D22:D21{
 };
 
 struct D1:B1{
-
-	void vf() const {cout<<"D1::vf()\n";}
 	void f()  {cout<<"D1::f()\n";}
+	void vf() const {cout<<"D1::vf()\n";}
 	void pvf() override {cout<<"D1::pvf()\n";}
 	
 };
 
 struct D2:D1{
-	void vf() {cout<<"D2::vf()\n";}
 	void f()const {cout<<"D2::f()\n";}
+	void vf() {cout<<"D2::vf()\n";}
 	void pvf() override { cout<<"D2::pvf()\n";}
 };
 

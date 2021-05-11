@@ -1,0 +1,10 @@
+socks 1 15.6
+ball 2 100.2
+table 3 200.5
+mouse 4 85.6
+shoes 5 60.4
+computer 6 500.45
+mobile 7 400.4
+guitar 8 350.34
+gloves 9 25.46
+jacket 10 45.6
