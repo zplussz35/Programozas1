@@ -8,6 +8,7 @@ struct Link {
 	Link* prev;
 	Link* succ;
 	Elem val;
+	
 };
 
 template<typename Elem>
@@ -20,6 +21,7 @@ public:
 
 	iterator begin() { return iterator(first); }
 	iterator end() { return iterator(last); }
+
 
 	iterator insert(iterator p, const Elem& v);
 	iterator erase (iterator p);
@@ -45,6 +47,7 @@ public:
 	iterator& operator--() { curr = curr->prev; return *this; }
 	Elem& operator*() { return curr->val; }
 
+
 	bool operator==(const iterator& b) const { return curr==b.curr; }
 	bool operator!=(const iterator& b) const { return curr!=b.curr; }
 };
@@ -63,6 +66,8 @@ Iter high (Iter first, Iter last){
 	return high;
 
 }
+
+
 
 int main()
 {
