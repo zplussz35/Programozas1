@@ -130,41 +130,11 @@ My_vector glob(10);
 int main()
 {
 	My_vector mv;
-    cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
-	cout<<mv.capacity()<<endl;
-	mv.push_back(8.5);
+	for(int i=0;i<18;++i)
+	{
+		cout<<mv.capacity()<<endl;
+		mv.push_back(8.5);
+	}
 	cout<<mv.capacity()<<endl;
 
 

@@ -1,4 +1,4 @@
- 
+
 //
 // This is a GUI support code to the chapters 12-16 of the book
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
@@ -11,7 +11,7 @@
 //------------------------------------------------------------------------------
 
 namespace Graph_lib {
- 
+
 Window::Window(int ww, int hh, const string& title)
     :Fl_Window(ww,hh,title.c_str()),w(ww),h(hh)
 {

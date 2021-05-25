@@ -60,7 +60,7 @@ int main()
 	
 	
 	
-	cout<<"Call eng\n";
+	cout<<"Call end\n";
 
 	//B2 b2;
 	D21 d21; cout<<'\n';

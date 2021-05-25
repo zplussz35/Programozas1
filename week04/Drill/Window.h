@@ -5,14 +5,14 @@
 //
 
 #ifndef WINDOW_GUARD
-#define WINDOW_GUARD 1
+#define WINDOW_GUARD
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include "std_lib_facilities.h"
 #include "Point.h"
 
-namespace Graph_lib {
+namespace Graph_lib {;
 class Shape;   // "forward declare" Shape
 class Widget;
 

@@ -24,7 +24,7 @@ private:
     Button next_button;     // the "next" button
     bool button_pushed;     // implementation detail
 
-    static void cb_next(Address, Address ); // callback for next_button
+    static void cb_next(Address, Address); // callback for next_button
     void next();            // action to be done when next_button is pressed
 
 };

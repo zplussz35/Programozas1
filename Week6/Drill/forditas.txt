@@ -1,0 +1,1 @@
+g++ elso.cpp Graph.cpp Window.cpp GUI.cpp Lines_window.cpp -o main `fltk-config --ldflags --use-images` -Wno-deprecated
